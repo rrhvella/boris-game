@@ -1,9 +1,9 @@
 Installation Instructions
-----------------------------
+-------------------------
 
 
 For Windows Platforms
-----------------------
+---------------------
 
 Prior to attempting to run Boris the first time, please install the VisualC++ runtime. A copy of the installation file can be found at this location:
 
@@ -20,7 +20,7 @@ http://www.microsoft.com/express/windows/
 
 
 For Unix Platforms
-----------------------
+------------------
 
 Boris was succesfully installed and tested on the following Unix-like systems:
 
@@ -33,8 +33,11 @@ scons 1.3 or later: http://www.scons.org/download.php
 sdl 1.2 or later: http://www.libsdl.org/download-1.2.php
 sdl-mixer 1.2.10 or later: http://www.libsdl.org/projects/SDL_mixer/
 sdl-ttf 1.2.10 or later: http://www.libsdl.org/projects/SDL_mixer/
+sdl-gfx 2.0.21 or later: http://www.ferzkopp.net/joomla/software-mainmenu-14/4-ferzkopps-linux-software/19-sdlgfx
 lua 5.1 or later: http://www.lua.org/download.html
 libvorbis 1.2 or later: http://www.linuxfromscratch.org/blfs/view/stable/multimedia/libvorbis.html
+
+
 
 Then open the terminal and navigate to the following location:
 

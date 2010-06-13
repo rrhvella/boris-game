@@ -1,4 +1,0 @@
-local scoreTable = {
-{name = 'Louise', score = 4600},
-{name = 'Oh noes', score = 1000}
-}return scoreTable

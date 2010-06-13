@@ -5,17 +5,16 @@ Installation Instructions
 For Windows Platforms
 ---------------------
 
-Prior to attempting to run Boris the first time, please install the VisualC++ runtime. A copy of the installation file can be found at this location:
-
-{Boris Project Root}\Build\Win32\
-
 A pre-built binary can be downloaded from the following location:
 
-The folder Boris, contained within the above zip file has all the required dependencies and files. To install the game, simply copy this folder to a desired location on the hard disk.
+http://dl.dropbox.com/u/6853631/Boris.zip
+
+The folder Boris, contained within the above zip file has all the required dependencies and files. To install the game, simply copy this folder to a desired location on the hard disk. Prior to attempting to run Boris the first time, please install the Visual C++ runtime. A copy of the install file can be found in the zip file.
 
 Should you need to rebuild the solution, please use the Visual C++ solution file included with the source code -- {Boris Project Root}\Project Files\VC. Please note that the solution file was created using Visual C++ 2010, and you will need to install that software (Or a later version) in order to use it.
 
 A free copy can be obtained from the following location:
+
 http://www.microsoft.com/express/windows/
 
 

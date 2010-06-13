@@ -7,7 +7,7 @@ Boris is a cross platform open source tetris clone, released under the permissiv
   * An event handling system which allows event delegation to both c++ and lua functions.
   * Simple UI controls, such as a textbox, label, and menu system.
   * Components are redrawn on a need-to refresh basis.
-  * Lua bindings.
+  * Game engine implemented in C++, game logic implemented in Lua.
   
   
 Installation

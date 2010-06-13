@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Boris\Source\EventHandling\GenericEventHandler.h" />
+    <ClInclude Include="..\..\Boris\Source\EventHandling\InputEventHandler.h" />
+    <ClInclude Include="..\..\Boris\Source\EventHandling\KeyEventComponent.h" />
+    <ClInclude Include="..\..\Boris\Source\EventHandling\KeyEventHandler.h" />
+    <ClInclude Include="..\..\Boris\Source\EventHandling\LuaEventHandler.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\ApplicationException.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\DirectoryTraverser.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\GeometricHelperFunctions.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\GeometricStructures2D.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\Grid.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\IUncopyable.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\LuaHelperFunctions.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\SDLHelperFunctions.h" />
+    <ClInclude Include="..\..\Boris\Source\Helpers\StringHelperFunctions.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaLoomEffect.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLComponent.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLFontFile.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLForm.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLInstance.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLSurfaceGrid.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLSurfaceGridComponent.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLText.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLTextBox.h" />
+    <ClInclude Include="..\..\Boris\Source\LuaInterface\LuaSDLTimer.h" />
+    <ClInclude Include="..\..\Boris\Source\ResourcePipelineSingleton.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\MixException.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\ResourceException.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLComponent.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLEffects.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLException.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLFontFile.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLForm.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLInstance.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLInterfaceLibraryException.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLResourcePipeline.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLResourceTrunk.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLScreenEffects.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLSurfaceGrid.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLSurfaceGridComponent.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLText.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLTextBox.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\SDLTimer.h" />
+    <ClInclude Include="..\..\Boris\Source\SDLInterface\TTFException.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Boris\Source\BorisMain.cpp" />
+    <ClCompile Include="..\..\Boris\Source\EventHandling\LuaEventHandler.cpp" />
+    <ClCompile Include="..\..\Boris\Source\Helpers\ApplicationException.cpp" />
+    <ClCompile Include="..\..\Boris\Source\Helpers\DirectoryTraverser.cpp" />
+    <ClCompile Include="..\..\Boris\Source\Helpers\LuaHelperFunctions.cpp" />
+    <ClCompile Include="..\..\Boris\Source\Helpers\SDLHelperFunctions.cpp" />
+    <ClCompile Include="..\..\Boris\Source\Helpers\StringHelperFunctions.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLComponent.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLEffects.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLFontFile.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLForm.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLInstance.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLResourceTrunk.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLScreenEffects.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLSurfaceGrid.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLSurfaceGridComponent.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLText.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLTextBox.cpp" />
+    <ClCompile Include="..\..\Boris\Source\SDLInterface\SDLTimer.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F798D280-6ED9-4C54-981A-BA9AF068FAA4}</ProjectGuid>
+    <RootNamespace>Boris</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\..\Boris\Includes;$(ProjectDir)..\..\Boris\Source;$(IncludePath)</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(ProjectDir)..\..\Boris\Source;$(ProjectDir)..\..\Boris\Debug Sources\Lua;$(ProjectDir)..\..\Boris\Debug Sources\SDL;$(SourcePath)</SourcePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)..\..\Boris\Includes;$(ProjectDir)..\..\Boris\Source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <SourcePath>$(ProjectDir)..\..\Boris\Source;$(ProjectDir)..\..\Boris\Debug Sources\Lua;$(ProjectDir)..\..\Boris\Debug Sources\SDL;$(SourcePath)</SourcePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>DEBUG</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\Boris\Libraries\Win32\SDL;$(ProjectDir)..\..\Boris\Libraries\Win32\Lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL.lib;SDL_gfx.lib;SDL_mixer.lib;SDL_ttf.lib;SDLmain.lib;lua5.1.lib;lua51.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\Boris\Libraries\Win32\SDL;$(ProjectDir)..\..\Boris\Libraries\Win32\Lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL.lib;SDL_gfx.lib;SDL_mixer.lib;SDL_ttf.lib;SDLmain.lib;lua5.1.lib;lua51.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>Deploy.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

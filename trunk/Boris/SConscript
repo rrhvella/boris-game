@@ -1,0 +1,79 @@
+import os
+import re
+
+def process_files(target, source, env):
+	#Process Data
+	os.system("rm -r Build/Scons/Data")
+	os.system("rm -r Build/Scons/Scripts")
+
+
+	os.system("mkdir Build/Scons/Data")
+	os.system("mkdir Build/Scons/Scripts")
+	os.system("Build/Scons/ResourcePacker Data/Global Build/Scons/Data/Global.dat")
+	os.system("Build/Scons/ResourcePacker Data/Forms/Game Build/Scons/Data/Game.dat")
+	os.system("Build/Scons/ResourcePacker Data/Forms/GameOver Build/Scons/Data/GameOver.dat")
+	os.system("Build/Scons/ResourcePacker Data/Forms/MainMenu Build/Scons/Data/MainMenu.dat")
+	os.system("Build/Scons/ResourcePacker Data/Forms/Score Build/Scons/Data/Score.dat")
+
+	def process_scripts(script_directory):
+		lua_files = []
+
+		for path, directories, files in os.walk("./%s" % script_directory):
+			for file in files:
+				if re.match("(.*).lua$", file):
+					lua_files.append(file)
+
+		for lua_file in lua_files:
+			os.system("luac -o Build/Scons/Scripts/%s %s/%s" % (lua_file, script_directory.replace(" ", "\ "), lua_file))
+
+	process_scripts("Scripts")
+	process_scripts("Release Scripts")
+
+	os.system("cp Data/ARIAL.TTF Build/Scons/Data/ARIAL.TTF")
+	os.system("cp Data/top.dat Build/Scons/Data/top.dat")
+
+def main():
+	environment = Environment() 
+
+	#Recursively add project sources and includes 
+	sources = ["Source/BorisMain.cpp"]
+	include_directories = []
+
+	for path, directories, files in os.walk("Source/"):
+		if path.find("svn") != -1 or path.find(".deps") != -1:
+			continue
+
+		include_directories.append(path + "/")
+
+		for directory in directories:
+			if directory.find(".svn") == -1 and directory.find(".deps") == -1:
+				sources.append(Glob("%s/%s/*.cpp" % (path, directory)))
+
+	#Add 3rd party includes
+
+	include_directories.append("Includes/")
+
+	#Add 3rd party libraries
+	lib_directories = ["/usr/local/lib/", "/usr/lib/"]
+	libraries = ["lua", "SDL", "SDL_mixer", "SDL_gfx", "SDL_ttf"]
+
+	#Build
+	environment.Program(target = "Boris", source = sources, CPPPATH = include_directories, 
+			LIBPATH = lib_directories, LIBS = libraries, CCFLAGS = ['-g','-O3'])
+	
+	#Recursively add project sources and includes 
+	ResourcePackerSources = ["Source/ResourcePackerMain.cpp", "Source/Helpers/DirectoryTraverser.cpp", 
+		"Source/Helpers/ApplicationException.cpp", "Source/Helpers/StringHelperFunctions.cpp"]
+
+	#Build
+	environment.Program(target = "ResourcePacker", source = ResourcePackerSources, CPPPATH = include_directories,
+			CCFLAGS = ['-g','-O3'])
+
+	environment.AddPostAction("ResourcePacker", environment.Action(process_files))
+
+
+	#Install
+	Alias("install", environment.Install(dir = "/usr/local/bin/Boris",
+			 		source = ["Boris", "Data", "Scripts"]))
+
+main()

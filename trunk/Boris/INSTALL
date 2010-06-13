@@ -9,15 +9,12 @@ Prior to attempting to run Boris the first time, please install the VC++ runtime
 
 {Boris Project Root}\Build\Win32\
 
-With each release, you will generally find a pre-built binary in the following folder:
+A pre-built binary can be downloaded from the following location:
 
-{Boris Project Root}\Build\Win32\Boris
+This rar file contains all the required dependencies and files. To install the game, simply extract the contents to a desired location on the hard disk.
 
-This folder contains all the required dependencies and files. To install the game, simply copy this folder and all it's contents to a desired location on the hard disk.
 
-Alternitavely, you can download the folder in zip format from the following location:
-
-Should you need to rebuild the solution, please use the VC++ solution file included with this source code (Can be found at the location: {Boris Project Root}\Project Files\VC++). Please note that the solution file was created using VC++ 2010, and you will need to install that software (Or a later version) in order to use it.
+Should you need to rebuild the solution, please use the VC++ solution file included with the source code -- {Boris Project Root}\Project Files\VC++. Please note that the solution file was created using VC++ 2010, and you will need to install that software (Or a later version) in order to use it.
 
 A free copy can be obtained from the following location:
 http://www.microsoft.com/express/windows/
@@ -30,10 +27,27 @@ Boris was succesfully installed and tested on the following Unix-like systems:
 
 Ubunto 32-bit 10.4 
 
-Due to the great variety of Unix-like systems in existance, this project is not pre-packaged with any pre-built binary files. Instead, it is recommended that you build the game from source using the provided SCons scripts. In order to do so, please make sure that you have the following components installed on your system -- Many of them are pre-packaged with most linux distributions, in the case of Debian systems, it is reccommended that you use the package installation facilities:
+Due to the great variety of Unix-like systems in existance, this project is not pre-packaged with any pre-built binary files. Instead, it is recommended that you build the game from source using the provided SCons scripts. In order to do so, please make sure that you have the following components installed on your system -- Many of them are pre-packaged with most linux distributions, in the case of Debian or Red Hat systems, it is reccommended that you use the package installation facilities:
 
 python 2.6 or later: http://www.python.org/download/
 scons 1.3 or later: http://www.scons.org/download.php
 sdl 1.2 or later: http://www.libsdl.org/download-1.2.php
 sdl-mixer 1.2.10 or later: http://www.libsdl.org/projects/SDL_mixer/
 sdl-ttf 1.2.10 or later: http://www.libsdl.org/projects/SDL_mixer/
+lua 5.1 or later: http://www.lua.org/download.html
+libvorbis 1.2 or later: http://www.linuxfromscratch.org/blfs/view/stable/multimedia/libvorbis.html
+
+Then open the terminal and navigate to the following location:
+
+{Boris Project Root}\Boris
+
+
+To create a binary package in the build directory -- {Boris Project Root}\Boris\Build\Scons -- run the following command:
+
+scons
+
+To copy the files to the usr/local/bin folder, run the following command:
+
+scons install
+
+

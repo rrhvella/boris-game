@@ -33,6 +33,12 @@ using namespace std;
 
 namespace Helpers
 {
+	/*
+		Class: GridException
+
+		A surface grid is a rectangular array of SDL_Surface pointers. This class
+		specifies a series of methods to assert, draw, and manage this array.
+	*/
 	class GridException: public ApplicationException
 	{
 		public:
@@ -41,7 +47,16 @@ namespace Helpers
 				{
 				}
 	};
+	
+	/*
+		Class: Grid
 
+		Abstracts and manages a two-dimensional array of objects.
+		
+		Template: CellClass
+		
+		The type of the objects which will  be stored in this grid.
+	*/
 	template <class CellClass>
 	class Grid
 	{
@@ -53,6 +68,14 @@ namespace Helpers
 			unsigned int totalSize;
 
 		public:
+			/*
+				Constructor: Grid
+
+				Parameters:
+					width - The horizontal number of cells in the grid.
+					
+					height - The vertical number of cells in the grid.
+			*/
 			Grid(unsigned int width, unsigned int height)
 			{
 				this->width = width;
@@ -67,7 +90,7 @@ namespace Helpers
 					this->grid[i] = NULL;
 				}
 			}
-
+			
 			Grid(const Grid<CellClass>& source)
 			{
 				this->width = source.GetWidth();
@@ -88,6 +111,19 @@ namespace Helpers
 				}
 			}
 
+			
+			/*
+				Function: Get
+
+				Parameters:
+
+					x - The horizontal position of the object you wish to retrieve.
+
+					y - The vertical position of the object you wish to retrieve.
+					
+				Returns:
+					The object at ([x], [y])
+			*/
 			CellClass Get(unsigned int x, unsigned int y) const
 			{
 				if(x >= width || y >= height)
@@ -107,7 +143,7 @@ namespace Helpers
 				{
 					stringstream error;
 
-					error << "Attempted from null location.";
+					error << "Attempted to load object from null location.";
 
 					throw GridException(error.str().c_str());
 				}
@@ -115,6 +151,21 @@ namespace Helpers
 				return *grid[y*width + x];
 			}
 
+			/*
+				Function: Set
+				
+				Sets the contents of location ([x], [y]) to [newObject].
+					
+				Parameters:
+
+					x - The horizontal position you wish to write to.
+
+					y - The vertical position you wish to write to.
+					
+					newObject - The object you wish to write to location ([x], [y])
+				
+				
+			*/
 			void Set(unsigned int x, unsigned int y, CellClass newObject)
 			{
 				if(x >= width || y >= height)
@@ -139,12 +190,22 @@ namespace Helpers
 					*grid[y*width + x] = newObject;
 				}
 			}
+			/*
+				Function: GetWidth
 
+				Returns:
+					The horizontal number of cells in the grid.
+			*/
 			int GetWidth() const
 			{
 				return width;
 			}
+			/*
+				Function: GetHeight
 
+				Returns:
+					The vertical number of cells in the grid.
+			*/
 			int GetHeight() const
 			{
 				return height;

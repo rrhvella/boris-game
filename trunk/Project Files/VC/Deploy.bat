@@ -14,7 +14,7 @@ FOR /f %%A IN ('DIR /b ..\..\Boris\Scripts *.lua') DO CALL ..\..\Boris\Tools\Win
 ::Compile Release Script files
 FOR /f %%A IN ('DIR /b "..\..\Boris\Release Scripts" *.lua') DO CALL ..\..\Boris\Tools\Win32\luac\luac5.1.exe -o ..\..\Boris\Build\Win32\Boris\Scripts\%%A  "..\..\Boris\Release Scripts\%%A"
 
-Copy resources
+::Copy resources
 COPY ..\..\Boris\Data\ARIAL.TTF ..\..\Boris\Build\Win32\Boris\Data\
 COPY ..\..\Boris\Data\top.dat ..\..\Boris\Build\Win32\Boris\Data\
 

@@ -6,4 +6,9 @@
     <LocalDebuggerEnvironment>PATH=$(ProjectDir)..\..\Boris\Bin\Win32
 </LocalDebuggerEnvironment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerEnvironment>PATH=$(ProjectDir)..\..\Boris\Bin\Win32
+</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

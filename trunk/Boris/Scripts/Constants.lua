@@ -190,7 +190,7 @@ SCORE_FILE_NAME = "Data/top.dat"
 --Music
 
 MENU_BACKGROUND_MUSIC = "First Time in a Long Time"
-MAIN_GAME_BACKGROUND_MUSIC = "First Time in a Long Time"
+MAIN_GAME_BACKGROUND_MUSIC = "The Jungle Beckons"
 GAME_OVER_BACKGROUND_MUSIC = "First Time in a Long Time"
 
 MUSIC_FADE_LENGTH = 1000

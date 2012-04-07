@@ -1,10 +1,10 @@
 Introduction 
 -------------
-Boris is a cross platform open source tetris clone, released under the permissive zlib License. This project was developed with the intention of showcasing my programming abilities in c++ and lua, which were developed while creating this project. Specific features include:
+Boris is a cross platform open source tetris clone, released under the permissive zlib License. This project was developed with the intention of showcasing my programming abilities in C++ and Lua, which were developed while creating this project. Specific features include:
 
   * A resource handling system for both free files and resource files.
   * Modest graphical effects like screen fades, color overlay and zooming (Using SDL_gfx).
-  * An event handling system which allows event delegation to both c++ and lua functions.
+  * An event handling system which allows event delegation to both C++ and Lua functions.
   * Simple UI controls, such as a textbox, label, and menu system.
   * Components are redrawn on a need-to refresh basis.
   * Game engine implemented in C++, game logic implemented in Lua.
